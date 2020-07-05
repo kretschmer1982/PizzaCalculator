@@ -17,7 +17,7 @@
    <string>PizzaCalculator</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QComboBox" name="comboBox1">
+   <widget class="QComboBox" name="pizzaSize1_CB">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -30,7 +30,10 @@
      <enum>Qt::DefaultContextMenu</enum>
     </property>
     <property name="editable">
-     <bool>false</bool>
+     <bool>true</bool>
+    </property>
+    <property name="currentText">
+     <string/>
     </property>
     <property name="currentIndex">
      <number>0</number>
@@ -56,7 +59,7 @@
      </property>
     </item>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="pizzaPrice1_LI">
     <property name="geometry">
      <rect>
       <x>260</x>
@@ -64,6 +67,48 @@
       <width>113</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Preis eingeben</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>210</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>relative Price [Cent/cm²]</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="relativePrice1">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>250</y>
+      <width>111</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="calculate_PB">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>250</y>
+      <width>93</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>calculate</string>
     </property>
    </widget>
   </widget>

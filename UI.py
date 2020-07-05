@@ -1,4 +1,5 @@
 import sys
+import math
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
 from decimal import Decimal
 
@@ -12,14 +13,16 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         QtWidgets.QMainWindow.__init__(self)
         Ui_MainWindow.__init__(self)
         self.setupUi(self)
-        #self.comboBox1.clicked.connect(self.calculate_tax)
+        self.calculate_PB.clicked.connect(self.calculate_result)
 
-    def calculate_tax(self):
-        price = Decimal(self.price_box.text())
-        tax = Decimal(self.tax_rate.value())
-        total_price = price + ((tax / 100) * price)
-        total_price_string = "The total price with tax is: {:.2f}".format(total_price)
-        self.results_output.setText(total_price_string)
+    def calculate_result(self):
+
+        pizzaArea = int(self.pizzaSize1_CB.currentText())**2 * math.pi / 4
+
+        relPrice = pizzaArea / int(self.pizzaPrice1_LI.text()) /100
+        #print(relPrice)
+        self.relativePrice1.setText(str(relPrice))
+
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
