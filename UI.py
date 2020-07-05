@@ -16,10 +16,17 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.calculate_PB.clicked.connect(self.calculate_result)
 
     def calculate_result(self):
+        input = self.pizzaPrice1_LI.text()
 
-        pizzaArea = int(self.pizzaSize1_CB.currentText())**2 * math.pi / 4
+        if "," in input:
+            priceCent = float(input.replace(",", ".")) * 100
+            print(priceCent)
+        else:
+            priceCent = float(input) * 100
 
-        relPrice = pizzaArea / int(self.pizzaPrice1_LI.text()) /100
+        pizzaArea = float(self.pizzaSize1_CB.currentText())**2 * math.pi / 4
+
+        relPrice = pizzaArea / priceCent
         #print(relPrice)
         self.relativePrice1.setText(str(relPrice))
 
