@@ -16,6 +16,9 @@
   <property name="windowTitle">
    <string>PizzaCalculator</string>
   </property>
+  <property name="inputMethodHints">
+   <set>Qt::ImhNone</set>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QComboBox" name="pizzaSize1_CB">
     <property name="geometry">
@@ -67,6 +70,12 @@
       <width>113</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Preis der Pizza eingeben&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhFormattedNumbersOnly</set>
     </property>
     <property name="placeholderText">
      <string>Preis eingeben</string>
