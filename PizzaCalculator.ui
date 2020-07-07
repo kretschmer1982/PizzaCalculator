@@ -36,7 +36,7 @@
      <bool>true</bool>
     </property>
     <property name="currentText">
-     <string/>
+     <string>26</string>
     </property>
     <property name="currentIndex">
      <number>0</number>
@@ -99,8 +99,8 @@
      <rect>
       <x>410</x>
       <y>250</y>
-      <width>111</width>
-      <height>51</height>
+      <width>101</width>
+      <height>21</height>
      </rect>
     </property>
     <property name="readOnly">
@@ -120,6 +120,46 @@
      <string>calculate</string>
     </property>
    </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>330</y>
+      <width>391</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <row>
+     <property name="text">
+      <string>1</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>2</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>3</string>
+     </property>
+    </row>
+    <column>
+     <property name="text">
+      <string>Durchmesser</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Preis</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>relativer Preis</string>
+     </property>
+    </column>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -127,7 +167,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
