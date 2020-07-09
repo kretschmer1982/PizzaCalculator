@@ -20,7 +20,7 @@
    <set>Qt::ImhNone</set>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QComboBox" name="pizzaSize1_CB">
+   <widget class="QComboBox" name="pizzaSize_CB_1">
     <property name="geometry">
      <rect>
       <x>160</x>
@@ -62,7 +62,7 @@
      </property>
     </item>
    </widget>
-   <widget class="QLineEdit" name="pizzaPrice1_LI">
+   <widget class="QLineEdit" name="pizzaPrice_LI_1">
     <property name="geometry">
      <rect>
       <x>260</x>
@@ -84,33 +84,20 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>410</x>
-      <y>210</y>
+      <x>400</x>
+      <y>220</y>
       <width>141</width>
-      <height>31</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="text">
      <string>relative Price [Cent/cm²]</string>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="relativePrice1">
-    <property name="geometry">
-     <rect>
-      <x>410</x>
-      <y>250</y>
-      <width>101</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="readOnly">
-     <bool>false</bool>
-    </property>
-   </widget>
    <widget class="QPushButton" name="calculate_PB">
     <property name="geometry">
      <rect>
-      <x>570</x>
+      <x>610</x>
       <y>250</y>
       <width>93</width>
       <height>28</height>
@@ -120,45 +107,210 @@
      <string>calculate</string>
     </property>
    </widget>
-   <widget class="QTableWidget" name="tableWidget">
+   <widget class="QLabel" name="relativePrice_Out_1">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>330</y>
-      <width>391</width>
-      <height>121</height>
+      <x>410</x>
+      <y>250</y>
+      <width>101</width>
+      <height>21</height>
      </rect>
     </property>
-    <row>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>220</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Durchmesser</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>220</y>
+      <width>55</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Preis</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="pizzaPrice_LI_2">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>280</y>
+      <width>113</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Preis der Pizza eingeben&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhFormattedNumbersOnly</set>
+    </property>
+    <property name="placeholderText">
+     <string>Preis eingeben</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="relativePrice_Out_2">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>280</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="pizzaSize_CB_2">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>280</y>
+      <width>73</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+    <property name="currentText">
+     <string>26</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <item>
      <property name="text">
-      <string>1</string>
+      <string>26</string>
      </property>
-    </row>
-    <row>
+    </item>
+    <item>
      <property name="text">
-      <string>2</string>
+      <string>33</string>
      </property>
-    </row>
-    <row>
+    </item>
+    <item>
      <property name="text">
-      <string>3</string>
+      <string>40</string>
      </property>
-    </row>
-    <column>
+    </item>
+    <item>
      <property name="text">
-      <string>Durchmesser</string>
+      <string>45</string>
      </property>
-    </column>
-    <column>
+    </item>
+   </widget>
+   <widget class="QLabel" name="relativePrice_Out_3">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>310</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="pizzaSize_CB_3">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>310</y>
+      <width>73</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="contextMenuPolicy">
+     <enum>Qt::DefaultContextMenu</enum>
+    </property>
+    <property name="editable">
+     <bool>true</bool>
+    </property>
+    <property name="currentText">
+     <string>26</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <item>
      <property name="text">
-      <string>Preis</string>
+      <string>26</string>
      </property>
-    </column>
-    <column>
+    </item>
+    <item>
      <property name="text">
-      <string>relativer Preis</string>
+      <string>33</string>
      </property>
-    </column>
+    </item>
+    <item>
+     <property name="text">
+      <string>40</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>45</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLineEdit" name="pizzaPrice_LI_3">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>310</y>
+      <width>113</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Preis der Pizza eingeben&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhFormattedNumbersOnly</set>
+    </property>
+    <property name="placeholderText">
+     <string>Preis eingeben</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -167,7 +319,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

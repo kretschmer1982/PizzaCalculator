@@ -18,17 +18,18 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         validator = QDoubleValidator()
         validator.setNotation(QtGui.QDoubleValidator.StandardNotation)
         validator.setRange(0, 50.00, 2)
-        self.pizzaPrice1_LI.setValidator(validator)
+        self.pizzaPrice_LI_1.setValidator(validator)
 
     def calculate_result(self):
-        price = self.pizzaPrice1_LI.text()
+        price = self.pizzaPrice_LI_1.text()
         if "," in price:
             price = price.replace(",", ".")
+
         priceInCent = float(price) * 100
-        pizzaArea = float(self.pizzaSize1_CB.currentText())**2 * math.pi / 4
+        pizzaArea = float(self.pizzaSize_CB_1.currentText())**2 * math.pi / 4
 
         relPrice = pizzaArea / priceInCent
-        self.relativePrice1.setText(str(round(relPrice, 2))) # set rel. price in textbox
+        self.relativePrice_Out_1.setText(str(round(relPrice, 2))) # set rel. price in textbox
 
 
 if __name__ == "__main__":
