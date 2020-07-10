@@ -1,7 +1,8 @@
 import sys
 import math
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
-from PyQt5.QtGui import QDoubleValidator, QRegExpValidator
+from PyQt5.QtGui import QDoubleValidator
+from PyQt5.QtWidgets import QSlider
 from decimal import Decimal
 
 
@@ -20,6 +21,8 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         validator.setRange(0, 50.00, 2)
         self.pizzaPrice_LI_1.setValidator(validator)
 
+        self.length_verticalSlider.valueChanged.connect(self.value_change)
+
     def calculate_result(self):
         price = self.pizzaPrice_LI_1.text()
         if "," in price:
@@ -31,6 +34,10 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         relPrice = pizzaArea / priceInCent
         self.relativePrice_Out_1.setText(str(round(relPrice, 2))) # set rel. price in textbox
 
+    def value_change(self, value):
+        size = self.length_verticalSlider.value()
+        print(value)
+        self.length_label.setText(str(size))
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)

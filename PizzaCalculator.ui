@@ -334,8 +334,8 @@
    <widget class="QLabel" name="pizza_quad_label">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>240</y>
+      <x>0</x>
+      <y>250</y>
       <width>231</width>
       <height>121</height>
      </rect>
@@ -347,20 +347,69 @@
      <pixmap>.ressources/pizza_quad.jpg</pixmap>
     </property>
    </widget>
-   <widget class="QSlider" name="verticalSlider">
+   <widget class="QSlider" name="length_verticalSlider">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>250</y>
+      <x>250</x>
+      <y>260</y>
       <width>20</width>
       <height>111</height>
      </rect>
     </property>
-    <property name="value">
+    <property name="minimum">
+     <number>20</number>
+    </property>
+    <property name="maximum">
+     <number>80</number>
+    </property>
+    <property name="singleStep">
      <number>0</number>
     </property>
-    <property name="sliderPosition">
+    <property name="pageStep">
      <number>0</number>
+    </property>
+    <property name="value">
+     <number>40</number>
+    </property>
+    <property name="sliderPosition">
+     <number>40</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::NoTicks</enum>
+    </property>
+    <property name="tickInterval">
+     <number>0</number>
+    </property>
+   </widget>
+   <widget class="QSlider" name="width_verticalSlider">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>260</y>
+      <width>20</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>20</number>
+    </property>
+    <property name="maximum">
+     <number>80</number>
+    </property>
+    <property name="singleStep">
+     <number>5</number>
+    </property>
+    <property name="pageStep">
+     <number>10</number>
+    </property>
+    <property name="value">
+     <number>50</number>
+    </property>
+    <property name="sliderPosition">
+     <number>50</number>
     </property>
     <property name="orientation">
      <enum>Qt::Vertical</enum>
@@ -369,26 +418,66 @@
      <enum>QSlider::NoTicks</enum>
     </property>
    </widget>
-   <widget class="QSlider" name="verticalSlider_2">
+   <widget class="QLabel" name="length_label">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>250</y>
-      <width>20</width>
-      <height>111</height>
+      <x>250</x>
+      <y>380</y>
+      <width>21</width>
+      <height>21</height>
      </rect>
     </property>
-    <property name="value">
-     <number>0</number>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
     </property>
-    <property name="sliderPosition">
-     <number>0</number>
+    <property name="text">
+     <string>40</string>
     </property>
-    <property name="orientation">
-     <enum>Qt::Vertical</enum>
+   </widget>
+   <widget class="QLabel" name="width_label">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>380</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
     </property>
-    <property name="tickPosition">
-     <enum>QSlider::NoTicks</enum>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>50</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>240</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Länge</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>240</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Breite</string>
     </property>
    </widget>
    <zorder>pizza_round_label</zorder>
@@ -406,8 +495,12 @@
    <zorder>pizzaSize_CB_3</zorder>
    <zorder>pizzaPrice_LI_3</zorder>
    <zorder>pizza_quad_label</zorder>
-   <zorder>verticalSlider</zorder>
-   <zorder>verticalSlider_2</zorder>
+   <zorder>length_verticalSlider</zorder>
+   <zorder>width_verticalSlider</zorder>
+   <zorder>length_label</zorder>
+   <zorder>width_label</zorder>
+   <zorder>label_4</zorder>
+   <zorder>label_5</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -415,7 +508,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
