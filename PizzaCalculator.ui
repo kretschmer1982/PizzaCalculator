@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>1069</width>
     <height>600</height>
    </rect>
   </property>
@@ -86,25 +86,31 @@
      <rect>
       <x>490</x>
       <y>80</y>
-      <width>141</width>
+      <width>151</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>relative Price [Cent/cm²]</string>
+     <string>relativer Preis [Cent/cm²]</string>
     </property>
    </widget>
    <widget class="QPushButton" name="calculate_PB">
     <property name="geometry">
      <rect>
-      <x>630</x>
-      <y>130</y>
-      <width>93</width>
-      <height>28</height>
+      <x>620</x>
+      <y>220</y>
+      <width>141</width>
+      <height>51</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
     <property name="text">
-     <string>calculate</string>
+     <string>relativen 
+ Preis berechnen</string>
     </property>
    </widget>
    <widget class="QLabel" name="relativePrice_Out_1">
@@ -206,7 +212,7 @@
      <bool>true</bool>
     </property>
     <property name="currentText">
-     <string>26</string>
+     <string>33</string>
     </property>
     <property name="currentIndex">
      <number>0</number>
@@ -267,7 +273,7 @@
      <bool>true</bool>
     </property>
     <property name="currentText">
-     <string>26</string>
+     <string>40</string>
     </property>
     <property name="currentIndex">
      <number>0</number>
@@ -480,6 +486,44 @@
      <string>Breite</string>
     </property>
    </widget>
+   <widget class="QLineEdit" name="pizzaPrice_LI_4">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>300</y>
+      <width>113</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Preis der Pizza eingeben&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhFormattedNumbersOnly</set>
+    </property>
+    <property name="placeholderText">
+     <string>Preis eingeben</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="relativePrice_Out_4">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>300</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
    <zorder>pizza_round_label</zorder>
    <zorder>pizzaSize_CB_1</zorder>
    <zorder>pizzaPrice_LI_1</zorder>
@@ -501,14 +545,16 @@
    <zorder>width_label</zorder>
    <zorder>label_4</zorder>
    <zorder>label_5</zorder>
+   <zorder>pizzaPrice_LI_4</zorder>
+   <zorder>relativePrice_Out_4</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
-     <height>21</height>
+     <width>1069</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>

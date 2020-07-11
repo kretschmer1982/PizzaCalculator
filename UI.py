@@ -21,23 +21,29 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         validator.setRange(0, 50.00, 2)
         self.pizzaPrice_LI_1.setValidator(validator)
 
-        self.length_verticalSlider.valueChanged.connect(self.value_change)
+        self.length_verticalSlider.valueChanged.connect(self.set_length)
+        self.width_verticalSlider.valueChanged.connect(self.set_width)
 
     def calculate_result(self):
-        price = self.pizzaPrice_LI_1.text()
-        if "," in price:
-            price = price.replace(",", ".")
-
-        priceInCent = float(price) * 100
+        price_1 = self.pizzaPrice_LI_1.text()
+        price_2 = self.pizzaPrice_LI_2.text()
+        price_3 = self.pizzaPrice_LI_3.text()
+        priceInCent_1 = self.price_as_float(price_1)
         pizzaArea = float(self.pizzaSize_CB_1.currentText())**2 * math.pi / 4
 
-        relPrice = pizzaArea / priceInCent
+        relPrice = pizzaArea / priceInCent_1
         self.relativePrice_Out_1.setText(str(round(relPrice, 2))) # set rel. price in textbox
 
-    def value_change(self, value):
-        size = self.length_verticalSlider.value()
-        print(value)
-        self.length_label.setText(str(size))
+    def price_as_float(self, text):
+        text = text.replace(",", ".")
+        value_float = float(text) * 100
+        return value_float
+
+    def set_length(self, value):
+        self.length_label.setText(str(value))
+
+    def set_width(self, value):
+        self.width_label.setText(str(value))
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
