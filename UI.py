@@ -1,14 +1,11 @@
 import sys
 import math
+import calculate
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
 from PyQt5.QtGui import QDoubleValidator
-from PyQt5.QtWidgets import QSlider
-from decimal import Decimal
-
 
 qtcreator_file  = "PizzaCalculator.ui" # Enter file here.
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtcreator_file)
-
 
 class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
@@ -28,6 +25,7 @@ class MyWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         self.width_verticalSlider.valueChanged.connect(self.set_width)
 
     def calculate_result(self):
+        #calculate.test()
         price_1 = self.pizzaPrice_LI_1.text()
         price_2 = self.pizzaPrice_LI_2.text()
         price_3 = self.pizzaPrice_LI_3.text()

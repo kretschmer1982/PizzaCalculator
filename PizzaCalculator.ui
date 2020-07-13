@@ -936,6 +936,25 @@
      <string/>
     </property>
    </widget>
+   <widget class="QLabel" name="testLabel_1">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>420</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
    <zorder>pizza_round_label</zorder>
    <zorder>pizzaSize_CB_1</zorder>
    <zorder>pizzaPrice_LI_1</zorder>
@@ -978,6 +997,7 @@
    <zorder>relativePrice_Out_4</zorder>
    <zorder>Area_label_4</zorder>
    <zorder>relCngArea_Label_3</zorder>
+   <zorder>testLabel_1</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -985,7 +1005,7 @@
      <x>0</x>
      <y>0</y>
      <width>1069</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
