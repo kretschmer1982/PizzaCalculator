@@ -78,7 +78,7 @@
      <set>Qt::ImhFormattedNumbersOnly</set>
     </property>
     <property name="text">
-     <string>5,45</string>
+     <string/>
     </property>
     <property name="placeholderText">
      <string>Preis eingeben</string>
@@ -184,7 +184,7 @@
      <set>Qt::ImhFormattedNumbersOnly</set>
     </property>
     <property name="text">
-     <string>8,05</string>
+     <string/>
     </property>
     <property name="placeholderText">
      <string>Preis eingeben</string>
@@ -347,6 +347,9 @@
     </property>
    </widget>
    <widget class="QLabel" name="pizza_round_label">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>60</x>
@@ -973,6 +976,44 @@
      <string>reset</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="hiddenButton_PB">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>111</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="flat">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="missing_Input_Label">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>450</y>
+      <width>141</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
    <zorder>pizza_round_label</zorder>
    <zorder>pizzaSize_CB_1</zorder>
    <zorder>pizzaPrice_LE_1</zorder>
@@ -1017,6 +1058,8 @@
    <zorder>relCngArea_Label_3</zorder>
    <zorder>testLabel_1</zorder>
    <zorder>clear_PB</zorder>
+   <zorder>hiddenButton_PB</zorder>
+   <zorder>missing_Input_Label</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -1024,7 +1067,7 @@
      <x>0</x>
      <y>0</y>
      <width>1069</width>
-     <height>26</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>
