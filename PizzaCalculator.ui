@@ -62,7 +62,7 @@
      </property>
     </item>
    </widget>
-   <widget class="QLineEdit" name="pizzaPrice_LI_1">
+   <widget class="QLineEdit" name="pizzaPrice_LE_1">
     <property name="geometry">
      <rect>
       <x>350</x>
@@ -168,7 +168,7 @@
      <string>Preis [€]</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="pizzaPrice_LI_2">
+   <widget class="QLineEdit" name="pizzaPrice_LE_2">
     <property name="geometry">
      <rect>
       <x>350</x>
@@ -324,7 +324,7 @@
      </property>
     </item>
    </widget>
-   <widget class="QLineEdit" name="pizzaPrice_LI_3">
+   <widget class="QLineEdit" name="pizzaPrice_LE_3">
     <property name="geometry">
      <rect>
       <x>350</x>
@@ -514,7 +514,7 @@
      <string>Breite</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="pizzaPrice_LI_4">
+   <widget class="QLineEdit" name="pizzaPrice_LE_5">
     <property name="geometry">
      <rect>
       <x>350</x>
@@ -790,7 +790,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLineEdit" name="pizzaPrice_LI_5">
+   <widget class="QLineEdit" name="pizzaPrice_LE_4">
     <property name="geometry">
      <rect>
       <x>350</x>
@@ -955,20 +955,38 @@
      <string/>
     </property>
    </widget>
+   <widget class="QPushButton" name="clear_PB">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>410</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>reset</string>
+    </property>
+   </widget>
    <zorder>pizza_round_label</zorder>
    <zorder>pizzaSize_CB_1</zorder>
-   <zorder>pizzaPrice_LI_1</zorder>
+   <zorder>pizzaPrice_LE_1</zorder>
    <zorder>label</zorder>
    <zorder>calculate_PB</zorder>
    <zorder>relativePrice_Out_1</zorder>
    <zorder>label_2</zorder>
    <zorder>label_3</zorder>
-   <zorder>pizzaPrice_LI_2</zorder>
+   <zorder>pizzaPrice_LE_2</zorder>
    <zorder>relativePrice_Out_2</zorder>
    <zorder>pizzaSize_CB_2</zorder>
    <zorder>relativePrice_Out_3</zorder>
    <zorder>pizzaSize_CB_3</zorder>
-   <zorder>pizzaPrice_LI_3</zorder>
+   <zorder>pizzaPrice_LE_3</zorder>
    <zorder>pizza_quad_label</zorder>
    <zorder>length_verticalSlider</zorder>
    <zorder>width_verticalSlider</zorder>
@@ -976,7 +994,7 @@
    <zorder>width_label</zorder>
    <zorder>label_4</zorder>
    <zorder>label_5</zorder>
-   <zorder>pizzaPrice_LI_4</zorder>
+   <zorder>pizzaPrice_LE_5</zorder>
    <zorder>relativePrice_Out_5</zorder>
    <zorder>relCngPrice_Label_1</zorder>
    <zorder>relCngPrice_Label_2</zorder>
@@ -991,13 +1009,14 @@
    <zorder>relCngArea_Label_2</zorder>
    <zorder>relCngArea_Label_4</zorder>
    <zorder>relCngArea_Label_1</zorder>
-   <zorder>pizzaPrice_LI_5</zorder>
+   <zorder>pizzaPrice_LE_4</zorder>
    <zorder>relCngPrice_Label_3</zorder>
    <zorder>pizzaSize_CB_4</zorder>
    <zorder>relativePrice_Out_4</zorder>
    <zorder>Area_label_4</zorder>
    <zorder>relCngArea_Label_3</zorder>
    <zorder>testLabel_1</zorder>
+   <zorder>clear_PB</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -1005,7 +1024,7 @@
      <x>0</x>
      <y>0</y>
      <width>1069</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

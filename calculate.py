@@ -1,13 +1,12 @@
 import math
 
 def calculate_result(GUI):
-    # print("test")
-    # GUI.testLabel_1.setText("Test")
-    price_1 = GUI.pizzaPrice_LI_1.text()
-    price_2 = GUI.pizzaPrice_LI_2.text()
-    price_3 = GUI.pizzaPrice_LI_3.text()
-    price_4 = GUI.pizzaPrice_LI_4.text()
-    price_5 = GUI.pizzaPrice_LI_5.text()
+
+    price_1 = GUI.pizzaPrice_LE_1.text()
+    price_2 = GUI.pizzaPrice_LE_2.text()
+    price_3 = GUI.pizzaPrice_LE_3.text()
+    price_4 = GUI.pizzaPrice_LE_4.text()
+    price_5 = GUI.pizzaPrice_LE_5.text()
     priceInCent_1 = price_as_float(price_1)
     priceInCent_2 = price_as_float(price_2)
     priceInCent_3 = price_as_float(price_3)
