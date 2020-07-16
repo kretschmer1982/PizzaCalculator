@@ -1,5 +1,6 @@
 import sys
 import calculate
+from PyQt5.QtWidgets import QLineEdit
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
 from PyQt5.QtGui import QDoubleValidator
 
@@ -35,7 +36,8 @@ class GUI(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def clear_all_LE(self):
         for widget in app.allWidgets():
-            #print(widget)
+            for child in GUI.findChildren(QLineEdit):
+                print("test" + str(child.text()))
             if isinstance(widget, QtWidgets.QLineEdit):
                 print("-----------------------")
                 print(widget)

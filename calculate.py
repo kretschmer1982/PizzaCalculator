@@ -1,6 +1,16 @@
 import math
 
+from PyQt5.QtWidgets import QLineEdit
+
+
 def calculate_result(GUI):
+    price = []
+    price.append(GUI.pizzaPrice_LE_1.text())
+    price.append(GUI.pizzaPrice_LE_2.text())
+    price.append(GUI.pizzaPrice_LE_3.text())
+    price.append(GUI.pizzaPrice_LE_4.text())
+    price.append(GUI.pizzaPrice_LE_5.text())
+    print(price)
 
     price_1 = GUI.pizzaPrice_LE_1.text()
     price_2 = GUI.pizzaPrice_LE_2.text()
