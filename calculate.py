@@ -1,5 +1,6 @@
 import math
 
+
 def calculate_result(GUI):
     price = []
     priceInCent = []
@@ -65,6 +66,8 @@ def calculate_result(GUI):
     GUI.Area_label_3.setText(str(round(pizzaArea[2], 0)))
     GUI.Area_label_4.setText(str(round(pizzaArea[3], 0)))
     GUI.Area_label_5.setText(str(round(pizzaArea[4], 0)))
+
+    GUI.diagram_GV.plot(pizzaArea, relativePrice)
 
 def price_as_float(text):
     if text == "":

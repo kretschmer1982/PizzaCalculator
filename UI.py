@@ -12,9 +12,7 @@ class GUI(QtWidgets.QMainWindow, Ui_MainWindow):
         QtWidgets.QMainWindow.__init__(self)
         Ui_MainWindow.__init__(self)
         self.setupUi(self)
-        # self.calculate_PB.clicked.connect(lambda: calculate.calculate_result(self))
-        self.calculate_PB.clicked.connect(self.check_Inputs_AndCalc)
-        self.clear_PB.clicked.connect(self.clear_all_LE)
+        #Init GUI elements
         validator = QDoubleValidator()
         validator.setNotation(QtGui.QDoubleValidator.StandardNotation)
         validator.setRange(0, 50.00, 2)
@@ -22,24 +20,23 @@ class GUI(QtWidgets.QMainWindow, Ui_MainWindow):
         self.pizzaPrice_LE_2.setValidator(validator)
         self.pizzaPrice_LE_3.setValidator(validator)
         self.pizzaPrice_LE_4.setValidator(validator)
-
-        self.length_verticalSlider.valueChanged.connect(self.set_length)
-        self.width_verticalSlider.valueChanged.connect(self.set_width)
-
         self.pizza_round_label.setHidden(True)
         self.pizza_quad_label.setHidden(True)
+        self.missing_Input_Label.setHidden(True)
+
+        #signals (events)
+        self.calculate_PB.clicked.connect(self.check_Inputs_AndCalc)
+        self.clear_PB.clicked.connect(self.clear_all_LE)
+        self.length_verticalSlider.valueChanged.connect(self.set_length)
+        self.width_verticalSlider.valueChanged.connect(self.set_width)
         self.hiddenButton_PB.clicked.connect(self.show_images)
 
-        # if self.pizzaPrice_LE_1.text() == "":
-        #     print("Textfeld 1 leer")
-
+        L = [1,2,3,4,5]
+        self.diagram_GV.plot(L)
 
     def clear_all_LE(self):
         for widget in app.allWidgets():
-            for child in GUI.findChildren(QLineEdit):
-                print("test" + str(child.text()))
             if isinstance(widget, QtWidgets.QLineEdit):
-                print("-----------------------")
                 print(widget)
                 widget.clear()
 
@@ -51,23 +48,21 @@ class GUI(QtWidgets.QMainWindow, Ui_MainWindow):
 
     def check_Inputs_AndCalc(self):
         for widget in app.allWidgets():
-            if isinstance(widget, QtWidgets.QLineEdit):
+            if isinstance(widget, QtWidgets.QLineEdit): #ToDO finds too many inherited QlineEdits
                 if widget.text() == "":
-                    self.missing_Input_Label.setText("Eine Eingabe fehlt")
-                    return
-        self.missing_Input_Label.setText("")
+                    self.missing_Input_Label.setHidden(False)
+                    print(widget)
+                    #return
+        self.missing_Input_Label.setHidden(True)
         calculate.calculate_result(self)
 
     def show_images(self):
-        self.pizza_round_label.setHidden(False)
-        self.pizza_quad_label.setHidden(False)
-
-        for widget in app.allWidgets():
-            if isinstance(widget, QtWidgets.QLineEdit):
-                if widget.text() == "":
-                    self.missing_Input_Label.setText("Eine Eingabe fehlt")
-
-
+        if self.hiddenButton_PB.isChecked():
+            self.pizza_round_label.setHidden(False)
+            self.pizza_quad_label.setHidden(False)
+        else:
+            self.pizza_round_label.setHidden(True)
+            self.pizza_quad_label.setHidden(True)
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
