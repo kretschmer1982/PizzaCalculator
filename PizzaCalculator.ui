@@ -1035,10 +1035,10 @@
    <widget class="PlotWidget" name="diagram_GV">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>490</y>
-      <width>431</width>
-      <height>321</height>
+      <x>320</x>
+      <y>510</y>
+      <width>371</width>
+      <height>291</height>
      </rect>
     </property>
     <property name="backgroundBrush">
@@ -1049,9 +1049,6 @@
        <blue>0</blue>
       </color>
      </brush>
-    </property>
-    <property name="interactive">
-     <bool>false</bool>
     </property>
    </widget>
    <zorder>pizza_round_label</zorder>
@@ -1108,7 +1105,7 @@
      <x>0</x>
      <y>0</y>
      <width>1052</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>

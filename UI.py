@@ -3,6 +3,7 @@ import calculate
 from PyQt5.QtWidgets import QLineEdit
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
 from PyQt5.QtGui import QDoubleValidator
+import pyqtgraph as pg
 
 qtcreator_file  = "PizzaCalculator.ui" # Enter file here.
 Ui_MainWindow, QtBaseClass = uic.loadUiType(qtcreator_file)
@@ -31,8 +32,7 @@ class GUI(QtWidgets.QMainWindow, Ui_MainWindow):
         self.width_verticalSlider.valueChanged.connect(self.set_width)
         self.hiddenButton_PB.clicked.connect(self.show_images)
 
-        L = [1,2,3,4,5]
-        self.diagram_GV.plot(L)
+        self.diagram_GV.setBackground('b')
 
     def clear_all_LE(self):
         for widget in app.allWidgets():

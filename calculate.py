@@ -1,4 +1,6 @@
 import math
+from PyQt5 import QtCore
+import pyqtgraph as pg
 
 
 def calculate_result(GUI):
@@ -67,7 +69,8 @@ def calculate_result(GUI):
     GUI.Area_label_4.setText(str(round(pizzaArea[3], 0)))
     GUI.Area_label_5.setText(str(round(pizzaArea[4], 0)))
 
-    GUI.diagram_GV.plot(pizzaArea, relativePrice)
+    pen = pg.mkPen('y', width=2, style=QtCore.Qt.DashLine)
+    GUI.diagram_GV.plot(pizzaArea, relativePrice, pen=pen)
 
 def price_as_float(text):
     if text == "":
