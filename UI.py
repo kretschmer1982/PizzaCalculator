@@ -34,7 +34,10 @@ class GUI(QtWidgets.QMainWindow, Ui_MainWindow):
         self.hiddenButton_PB.clicked.connect(self.show_images)
         self.diagram_PB.clicked.connect(self.show_diagram)
 
-        self.diagram_GV.setBackground('b')
+        self.diagram_GV.setBackground('#8c7e8c')
+        styles = {'color': 'y', 'font-size': '18px'}
+        self.diagram_GV.setLabel('left', 'rel. Preis [Cent/cm²]', **styles)
+        self.diagram_GV.setLabel('bottom', 'Pizzafläche [cm²]', **styles)
 
     def clear_all_LE(self):
         for widget in app.allWidgets():
