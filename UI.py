@@ -24,6 +24,7 @@ class GUI(QtWidgets.QMainWindow, Ui_MainWindow):
         self.pizza_round_label.setHidden(True)
         self.pizza_quad_label.setHidden(True)
         self.missing_Input_Label.setHidden(True)
+        self.diagram_GV.setHidden(True)
 
         #signals (events)
         self.calculate_PB.clicked.connect(self.check_Inputs_AndCalc)
@@ -31,6 +32,7 @@ class GUI(QtWidgets.QMainWindow, Ui_MainWindow):
         self.length_verticalSlider.valueChanged.connect(self.set_length)
         self.width_verticalSlider.valueChanged.connect(self.set_width)
         self.hiddenButton_PB.clicked.connect(self.show_images)
+        self.diagram_PB.clicked.connect(self.show_diagram)
 
         self.diagram_GV.setBackground('b')
 
@@ -63,6 +65,9 @@ class GUI(QtWidgets.QMainWindow, Ui_MainWindow):
         else:
             self.pizza_round_label.setHidden(True)
             self.pizza_quad_label.setHidden(True)
+
+    def show_diagram(self):
+        self.diagram_GV.setHidden(False)
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)

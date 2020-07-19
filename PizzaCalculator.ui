@@ -1051,6 +1051,24 @@
      </brush>
     </property>
    </widget>
+   <widget class="QPushButton" name="diagram_PB">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>410</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Diagramm</string>
+    </property>
+   </widget>
    <zorder>pizza_round_label</zorder>
    <zorder>pizzaSize_CB_1</zorder>
    <zorder>pizzaPrice_LE_1</zorder>
@@ -1098,6 +1116,7 @@
    <zorder>hiddenButton_PB</zorder>
    <zorder>missing_Input_Label</zorder>
    <zorder>diagram_GV</zorder>
+   <zorder>diagram_PB</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
