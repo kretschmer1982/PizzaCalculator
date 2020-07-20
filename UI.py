@@ -12,6 +12,7 @@ class GUI(QtWidgets.QMainWindow, Ui_MainWindow):
     def __init__(self):
         QtWidgets.QMainWindow.__init__(self)
         Ui_MainWindow.__init__(self)
+        self.setFixedHeight(525)
         self.setupUi(self)
         #Init GUI elements
         validator = QDoubleValidator()
@@ -75,6 +76,7 @@ class GUI(QtWidgets.QMainWindow, Ui_MainWindow):
             self.pizza_quad_label.setHidden(True)
 
     def show_diagram(self):
+        self.setFixedHeight(820)
         self.diagram_GV.setHidden(False)
 
 if __name__ == "__main__":
