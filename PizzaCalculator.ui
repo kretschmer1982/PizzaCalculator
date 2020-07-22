@@ -1077,6 +1077,9 @@
     <property name="text">
      <string>Diagramm</string>
     </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
    </widget>
    <zorder>pizza_round_label</zorder>
    <zorder>pizzaSize_CB_1</zorder>

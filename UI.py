@@ -50,6 +50,7 @@ class GUI(QtWidgets.QMainWindow, Ui_MainWindow):
             if isinstance(widget, QtWidgets.QLineEdit):
                 print(widget)
                 widget.clear()
+                self.diagram_GV.clear()
 
     def set_length(self, value):
         self.length_label.setText(str(value))
@@ -58,14 +59,11 @@ class GUI(QtWidgets.QMainWindow, Ui_MainWindow):
         self.width_label.setText(str(value))
 
     def check_Inputs_AndCalc(self):
-        for widget in app.allWidgets():
-            if isinstance(widget, QtWidgets.QLineEdit): #ToDO finds too many inherited QlineEdits
-                if widget.text() == "":
-                    self.missing_Input_Label.setHidden(False)
-                    print(widget)
-                    #return
-        self.missing_Input_Label.setHidden(True)
-        calculate.calculate_result(self)
+        try:
+            calculate.calculate_result(self)
+            self.missing_Input_Label.setHidden(True)
+        except:
+            self.missing_Input_Label.setHidden(False)
 
     def show_images(self):
         if self.hiddenButton_PB.isChecked():
@@ -76,8 +74,11 @@ class GUI(QtWidgets.QMainWindow, Ui_MainWindow):
             self.pizza_quad_label.setHidden(True)
 
     def show_diagram(self):
-        self.setFixedHeight(820)
-        self.diagram_GV.setHidden(False)
+        if self.diagram_PB.isChecked():
+            self.setFixedHeight(820)
+            self.diagram_GV.setHidden(False)
+        else:
+            self.setFixedHeight(525)
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
